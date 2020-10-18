@@ -1,32 +1,70 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <!--<div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <router-view/>
+    <router-view/> -->
+    <Header />
+    <div class="main-box">
+      <LeftSide />
+      <Content />
+    </div>
   </div>
 </template>
-
+<script>
+import Header from './components/Header'
+import LeftSide from './components/LeftSide'
+import Content from './components/Content'
+export default {
+  components: {
+    Header,
+    LeftSide,
+    Content
+  }
+}
+</script>>
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // font-family: 'Fira Sans', sans-serif;
+  font-family:'Noto Sans TC', sans-serif;
 }
 
-#nav {
-  padding: 30px;
+html, body{
+  background: #EEE;
+  height: 100%;
+  min-height: 100%;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+.main-box{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+.fade {
+  animation-name: fadeIn;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
+}
+
+@media screen and (max-width: 1200px){
+  .main-box{
+    flex-direction:row;
+    flex-wrap: wrap;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 </style>
