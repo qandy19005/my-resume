@@ -60,7 +60,6 @@ export default {
         margin: 0px auto;
         max-width: 350px;
         min-width: 100px;
-        min-height: 350px;
         overflow: hidden;
         cursor: pointer;
         .pictuers-top{
