@@ -13,19 +13,19 @@ export default {
     return {
       navArray: [{
         id: 0,
-        name: 'About Me',
+        name: this.$t('about'),
         value: 'about',
         className: 'myself-btn',
         icon: 'far fa-address-card'
       }, {
         id: 1,
-        name: 'Skill',
+        name: this.$t('skill'),
         value: 'skill',
         className: 'langAndSkill-btn',
         icon: 'fas fa-wrench'
       }, {
         id: 2,
-        name: 'Experience',
+        name: this.$t('exp'),
         value: 'exp',
         className: 'experience-btn',
         icon: 'fab fa-black-tie'
@@ -50,19 +50,19 @@ export default {
             float: left;
             border-radius: 5px;
             margin-top: 10px;
-            padding: 10px;
-            height: 70px;
+            padding: 5px;
+            height: 50px;
             width: 70%;
-            font-size: 20px;
+            font-size: 15px;
             color: #FFF;
             cursor: pointer;
             transition: all 0.4s ease 0s;
         }
         button:hover{
             width: 99%;
-            height: 80px;
+            height: 70px;
             transition: all 0.4s ease 0s;
-            font-size: 25px;
+            font-size: 20px;
         }
         .myself-btn{
             background: #335BBD;
@@ -93,13 +93,13 @@ export default {
                 width: 30% !important;
                 height: 100px;
                 margin: 15px 5px;
-                font-size:20px;
+                font-size:18px;
                 float: none;
             }
             button:hover{
                 width: 30%;
                 height: 100px;
-                font-size: 20px;
+                font-size: 18px;
             }
         }
     }

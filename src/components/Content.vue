@@ -1,8 +1,8 @@
 <template>
   <div class="content-box fade">
-    <AboutMe v-if="currentContent=== 'about'"/>
-    <Skills v-else-if="currentContent=== 'skill'"/>
-    <Experience v-else-if="currentContent=== 'exp'"/>
+    <AboutMe class="fade" v-if="currentContent=== 'about'"/>
+    <Skills class="fade" v-else-if="currentContent=== 'skill'"/>
+    <Experience class="fade" v-else-if="currentContent=== 'exp'" :key="changeLang"/>
   </div>
 </template>
 
@@ -20,7 +20,10 @@ export default {
   computed: {
     ...mapGetters([
       'currentContent'
-    ])
+    ]),
+    changeLang: function () {
+      return this.$i18n.locale
+    }
   }
 }
 </script>
@@ -29,13 +32,16 @@ export default {
 .content-box{
     justify-content: space-between;
     align-content: center;
-    background: #FFF;
+    background: #E6E6E6;
     margin: 50px 30px;
     border: 3px solid gray;
     border-radius: 5px;
     box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
     width: 100%;
-    height: 880px;
+    color: #313131;
+    padding: 10px;
+    overflow: auto;
+    max-height: 700px;
 }
 
 @media screen and (max-width:1200px){

@@ -5,7 +5,7 @@
       <router-link to="/about">About</router-link>
     </div>
     <router-view/> -->
-    <Header />
+    <Header :key="changeLang"/>
     <div class="main-box">
       <LeftSide />
       <Content />
@@ -21,6 +21,11 @@ export default {
     Header,
     LeftSide,
     Content
+  },
+  computed: {
+    changeLang: function () {
+      return this.$i18n.locale
+    }
   }
 }
 </script>>
@@ -43,13 +48,15 @@ html, body{
   display: flex;
   width: 100%;
   height: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
 .fade {
   animation-name: fadeIn;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
-  animation-duration: 2s;
+  animation-duration: 1s;
 }
 
 @media screen and (max-width: 1200px){
@@ -66,5 +73,25 @@ html, body{
   100% {
     opacity: 1;
   }
+}
+
+.fa-hand-point-left{
+    color: #A50000;
+    position:relative;
+    animation:handMove2 1s infinite alternate; /*IE*/
+    -moz-animation:handMove2 1s infinite alternate; /*FireFox*/
+    -webkit-animation:handMove2 1s infinite alternate; /*Chrome, Safari*/
+}
+@keyframes handMove2{
+    from {left:0%;}
+    to {left:2%;}
+}
+@-moz-keyframes handMove2{
+    from {left:0%;}
+    to {left:2%;}
+}
+@-webkit-keyframes handMove2{
+    from {left:0%;}
+    to {left:2%;}
 }
 </style>
