@@ -169,7 +169,6 @@ export default {
         .my-picture{
             padding: none;
             width: 280px;
-            min-height: 0;
         }
         .introduction{
             width: 280px;
