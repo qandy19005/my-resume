@@ -25,7 +25,7 @@
             <div>
                 <p class="ml5">
                     <span class="text-wrapper">
-                        <span class="letters">{{$t('bgh')}}</span>
+                        <span class="letters">Side Project - {{$t('bgh')}}</span>
                         <span class="letters" style="font-size:18px"> 2020 / 2 - {{$t('now')}} </span>
                     </span>
                 </p>
@@ -39,16 +39,29 @@
                     <p><i class="fas fa-angle-right"></i> {{$t('web')}} : <a href="https://boardgamehot.com/" target="_blank">{{$t('bgh')}}</a></p>
                     <br><hr><br>
                     <h3>Google Analytics</h3>
-                    <img src="./../assets/bgh-analytics.png"/>
+                    <div class="images-wrapper">
+                        <img @click="index = 0" class="image" src="./../assets/bgh-analytics.png"/>
+                    </div>
                 </div>
             </div>
         </div>
+        <CoolLightBox
+        :items="items"
+        :index="index"
+        @close="index = null">
+    </CoolLightBox>
     </div>
 </template>
 
 <script>
-import anime from 'animejs/lib/anime.es.js'
+import anime from 'animejs/lib/anime.js'
 export default {
+  data () {
+    return {
+      items: ['./../src/assets/bgh-analytics.png'],
+      index: null
+    }
+  },
   methods: {
     textAnimation () {
       const textWrapper = document.querySelector('.ml5')
@@ -108,12 +121,8 @@ div{
         .bgh-content-box{
             @include content-box;
             img{
-                width:80%;
+                width:90%;
                 box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
-            }
-            img:hover{
-                width:100%;
-                transition: all 0.4s ease 0s;
             }
         }
     }

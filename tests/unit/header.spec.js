@@ -8,6 +8,13 @@ localVue.use(VueI18n)
 
 describe('Header.vue', () => {
   it('Select tw will show 語言 content', async() => {
+    document.body.innerHTML =
+    '<h1 id="ml6" class="ml6">' +
+      '<span class="text-wrapper">' +
+        '<span class="letters"></span>'+
+      '</span>'+
+    '</h1>' +
+    '<div>';
     const msg = '語言'
     const i18n = new VueI18n({
         locale: 'tw',

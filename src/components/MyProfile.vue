@@ -1,7 +1,7 @@
 <template>
   <div class="profile-box" @mouseover="imgMouseOver" @mouseleave="imgMouseLeave">
-    <img v-if="!showPictures" class="my-picture" src="./../assets/me.jpg">
-    <div v-else-if="showPictures" class="my-picture pictures-box">
+    <img v-show="!showPictures" class="fade my-picture" src="./../assets/me.jpg">
+    <div v-show="showPictures" class="fade my-picture pictures-box">
         <div class="pictuers-top">
             <img class="top-left-slide" src="./../assets/me-river.jpg">
             <img class="top-right-slide" src="./../assets/me-glacier.jpg">
@@ -59,7 +59,6 @@ export default {
     .my-picture{
         margin: 0px auto;
         max-width: 350px;
-        min-width: 100px;
         overflow: hidden;
         cursor: pointer;
         .pictuers-top{

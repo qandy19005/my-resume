@@ -20,29 +20,50 @@
     <h1>{{$t('technologyTool')}}</h1>
     <div class="skill-content-box">
       <div class="background-box">
-        <p>- RWD, SEO, SPA</p>
-        <p>- RESTful API / Ajax / Axios</p>
-        <p>- Coding style / ESLint</p>
-        <p>- TDD,  Jest, Robot Framework, Unit / UI test</p>
-        <p>- Http / WebSocket</p>
-        <p>- SMTP server</p>
-        <p>- WebRTC / QRcode</p>
-        <p>- Line Bot, Google Map API</p>
-        <p>- Session / Cookie / LocalStorage</p>
+        <h2>{{$t('web-architecture')}}</h2>
+        <p> RWD / SEO / SPA</p>
+        <h2>API</h2>
+        <p> RESTful API / Ajax / Axios</p>
+        <h2>{{$t('code-quality')}}</h2>
+        <p> Coding style / ESLint</p>
+        <h2>{{$t('test')}}</h2>
+        <p> TDD / Jest / Robot Framework / Unit test/ UI test</p>
+        <h2>{{$t('web-protocol')}}</h2>
+        <p> Http / WebSocket</p>
+        <h2>{{$t('email')}}</h2>
+        <p> SMTP server</p>
+        <h2>HTML5</h2>
+        <p> WebRTC / QRcode</p>
+        <h2>{{$t('external')}} API</h2>
+        <p> Line Bot / Google Map API</p>
+        <h2>{{$t('data-storage')}}</h2>
+        <p> Session / Cookie / LocalStorage</p>
       </div>
       <div class="shadow-box">
-        <p>- Scrum / OKR</p>
-        <p>- Windows / Linux / Mac</p>
-        <p>- Git / Git flow</p>
-        <p>- Aws(EC2) / Heroku</p>
-        <p>- WordPress CMS</p>
-        <p>- Google Analytics / Google Search Console</p>
-        <p>- Postman / Insomina</p>
-        <p>- Appserv / Xampp / MAMP</p>
-        <p>- Npm / Webpack </p>
-        <p>- Appium</p>
-        <p>- Jira / Trello / bitrix24</p>
-        <p>- Chrome / Vue dev tool</p>
+        <h2>{{$t('dev-model-per-ex')}}</h2>
+        <p> Scrum / OKR</p>
+        <h2>{{$t('operating-system')}}</h2>
+        <p> Windows / Linux / Mac</p>
+        <h2>{{$t('version-control')}}</h2>
+        <p> Git / Git flow</p>
+        <h2>{{$t('cloud-service')}}</h2>
+        <p> Aws(EC2) / Heroku</p>
+        <h2>{{$t('self-media-e-commerce')}}</h2>
+        <p> WordPress CMS</p>
+        <h2>{{$t('data-analysis')}}</h2>
+        <p> Google Analytics / Google Search Console</p>
+        <h2>API {{$t('test')}}</h2>
+        <p> Postman / Insomina</p>
+        <h2>{{$t('server')}}</h2>
+        <p> Appserv / Xampp / MAMP</p>
+        <h2>{{$t('package-management-pack-tool')}}</h2>
+        <p> Npm / Webpack </p>
+        <h2>{{$t('app-automated-test')}}</h2>
+        <p> Appium</p>
+        <h2>{{$t('task-management-tool')}}</h2>
+        <p> Jira / Trello / Bitrix24</p>
+        <h2>{{$t('dev-tools')}}</h2>
+        <p> Chrome / Vue dev tool</p>
       </div>
     </div>
     <hr>
@@ -67,6 +88,12 @@ export default {
     display: grid;
     grid-template-columns: 50% 50%;
     font-size: 15px;
+    h2{
+      font-size: 20px;
+    }
+    p{
+      margin-left: 10px;
+    }
     i{
       font-size: 22px;
     }

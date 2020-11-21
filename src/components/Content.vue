@@ -40,8 +40,6 @@ export default {
     width: 100%;
     color: #313131;
     padding: 10px;
-    overflow: auto;
-    max-height: 700px;
 }
 
 @media screen and (max-width:1200px){

@@ -2,7 +2,7 @@
   <div class="exp-box">
   <h1>{{$t('exp')}}</h1>
   <div class="button-group">
-    <button v-for="button in btnArray" :key="button.id" :class="button.className" @click="currentPage = button.value">{{$t(button.name)}}</button>
+    <button v-for="button in btnArray" :key="button.id" :class="[button.className, currentPage === button.value ? 'button-select':'']" @click="currentPage = button.value">{{$t(button.name)}}</button>
   </div>
   <div class="exp-content-box">
     <LioshutanContent class="fade" v-if="currentPage === 'lioshutan' "/>
@@ -59,18 +59,24 @@ export default {
     text-align: center;
   }
   .button-group{
+    margin-top: 20px;
     text-align: center;
     button{
       cursor: pointer;
-      width: 100px;
-      height: 30px;
-      font-size: 15px;
+      width: 130px;
+      height: 50px;
+      font-size: 20px;
       color: #313131;
       background: #E7E7E7;
       border: 0.5px solid #F2F2F2;
     }
     button:hover{
       transition: all 250ms linear;
+      font-weight: 900;
+      text-shadow: 0.1em 0.1em #B8B8B8;
+      border: 3px solid #FFCE00;
+    }
+    .button-select{
       font-weight: 900;
       text-shadow: 0.1em 0.1em #B8B8B8;
       border: 3px solid #FFCE00;
@@ -96,9 +102,9 @@ export default {
     .button-group{
       margin-bottom: 20px;
       button{
-        width: 80px;
-        height: 28px;
-        font-size: 13px;
+        width: 100px;
+        height: 30px;
+        font-size: 15px;
       }
     }
   }
