@@ -29,8 +29,9 @@ describe('Header.vue', () => {
     })
     const select = wrapper.find('select')
     select.element.value = 'en';
+    // wrapper.find('button').trigger('click')
     await select.trigger('change');
-    expect(wrapper.text()).toContain('Language')
+    expect(wrapper.text()).toContain('Resume')
     // console.log(wrapper.find('select').trigger('change'))
     
   })

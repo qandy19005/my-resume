@@ -27,7 +27,7 @@
         <h2>{{$t('code-quality')}}</h2>
         <p> Coding style / ESLint</p>
         <h2>{{$t('test')}}</h2>
-        <p> TDD / Jest / Robot Framework / Unit test/ UI test</p>
+        <p> Jest / Robot Framework / Unit test/ UI test</p>
         <h2>{{$t('web-protocol')}}</h2>
         <p> Http / WebSocket</p>
         <h2>{{$t('email')}}</h2>

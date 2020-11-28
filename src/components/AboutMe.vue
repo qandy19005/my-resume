@@ -2,7 +2,7 @@
   <div class="about-box">
     <div class="my-info">
       <h1>{{$t('about')}}</h1><br>
-      <p><i class="fas fa-briefcase"></i> {{$t('position')}}</p>
+      <p><i class="fas fa-briefcase"></i> {{$t('position')}} <a href="https://github.com/qandy19005?tab=repositories" target="_blank"><i class="fab fa-github"></i></a></p>
       <p><i class="fas fa-envelope"></i> qandy19005@gmail.com</p>
       <p><i class="fas fa-phone-square-alt"></i> 0980780087</p>
       <p><i class="fas fa-map-marker-alt"></i> {{$t('taichung')}} / {{$t('taiwan')}}</p>

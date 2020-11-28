@@ -5,7 +5,7 @@
                 <p class="ml5">
                     <span class="text-wrapper">
                         <span class="letters">{{$t('exosite')}}</span>
-                        <span class="letters" style="font-size:18px"> 2017 / 07  - 2018 / 06 </span>
+                        <span class="letters" style="font-size:18px"> 2017 / 07  - 2018 / 06</span>
                     </span>
                 </p>
                 <p style="font-size:18px"><i class="fas fa-user"></i> {{$t('intern-qa')}}</p>
@@ -16,6 +16,7 @@
                     <p><i class="fas fa-angle-right"></i> {{$t('establish-test-environment')}} (Docker) </p>
                     <p><i class="fas fa-angle-right"></i> {{$t('test-tool')}} (Python) </p>
                     <p><i class="fas fa-angle-right"></i> Jekins {{$t('daily-check')}}</p>
+                    <p><i class="fas fa-angle-right"></i> Scrum</p>
                     <br><hr><br>
                     <h3><i class="fas fa-tasks"></i> {{$t('project')}}</h3>
                     <p><i class="far fa-file"></i> HAMVI : {{$t('hamvi-project')}}</p>

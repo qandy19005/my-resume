@@ -3,7 +3,7 @@
     <p class="ml5">
       <span class="text-wrapper">
         <span class="letters">{{$t('hipower')}}</span>
-        <span class="letters" style="font-size:18px"> 2019 / 01 - 2020 / 06</span>
+        <span class="letters" style="font-size:18px"> 2019 / 01 - 2020 / 02</span>
       </span>
     </p>
     <p style="font-size:18px"><i class="fas fa-user"></i> {{$t('full-stack-dev')}}</p>
@@ -26,10 +26,16 @@
         <p :class="['click-project', showContent==='wsapi'?'project-selected':'']" @click="showContent = 'wsapi'"><i class="far fa-file"></i> 國防部車辨系統 : WebSocket API, {{$t('hi-pro-1')}}<i  v-if="showContent!=='wsapi'" class="far fa-hand-point-left"></i></p>
         <div v-show="showContent==='wsapi'" class="fade object-detail">
             <ol>
-                <li>Node.js express後端開發，MySQL資料庫建置</li>
-                <li>撰寫WebSocket API進行攝影機與顧客端溝通</li>
-                <li>Promise async await處理異步問題</li>
+                <!-- <li>根據顧客需求書開發WebSocket API，讓Server端與顧客端持續連線，進行攝影機與顧客端資料的傳遞</li>
+                <li>使用Node.js express後端開發，並自行規劃與建置MySQL資料庫</li>
+                <li>使用ES6技術 Promise async await處理異步問題</li>
                 <li>Callback function處理資料庫資料取得問題</li>
+                <li>使用Mocha撰寫unit test，減少程式碼更改時造成的錯誤</li> -->
+                <li>{{$t('wsapi-content-1')}}</li>
+                <li>{{$t('wsapi-content-2')}}</li>
+                <li>{{$t('wsapi-content-3')}}</li>
+                <li>{{$t('wsapi-content-4')}}</li>
+                <li>{{$t('wsapi-content-5')}}</li>
             </ol>
             <br>
         </div>
@@ -37,23 +43,33 @@
         <p :class="['click-project', showContent==='ops'?'project-selected':'']" @click="showContent = 'ops'"><i class="far fa-file"></i> 營運平台系統 : {{$t('hi-pro-2')}}<i  v-if="showContent!=='ops'" class="far fa-hand-point-left"></i></p>
         <div v-show="showContent==='ops'" class="fade object-detail">
             <ol>
-                <li>Vue前端開發，PHP後端開發，MySQL資料庫建置</li>
-                <li>前端網頁切版設計</li>
-                <li>使用Vue Router以SPA架構開發</li>
-                <li>i18n多國語言開發</li>
+                <!-- <li>根據主管需求與架構書，進行前端網頁切版與視覺設計，並規劃與建置MySQL資料庫</li>
+                <li>幫公司導入Vue框架進行前端開發，搭配PHP後端開發</li>
+                <li>使用Vue Router以SPA架構開發，提高使用者體驗</li>
+                <li>使用i18n多國語言開發</li>
+                <li>串接Line Bot API，提供店家廣告推播功能</li>
+                <li>SMTP server郵件傳送，註冊成功與二次密碼修改通知</li>
                 <li>使用LocalStorage儲存前台相關資訊</li>
-                <li>Css3動畫與Sass預處理器開發</li>
-                <li>Npm套件管理</li>
-                <li>Ｗebpack程式碼編譯、打包以及壓縮</li>
+                <li>Css3動畫與Sass預處理器開發，Ｍedia query手刻RWD手機版</li>
+                <li>導入Npm套件管理與Ｗebpack進行程式碼編譯、打包以及壓縮</li> -->
+                <li>{{$t('ops-content-1')}}</li>
+                <li>{{$t('ops-content-2')}}</li>
+                <li>{{$t('ops-content-3')}}</li>
+                <li>{{$t('ops-content-4')}}</li>
+                <li>{{$t('ops-content-5')}}</li>
+                <li>{{$t('ops-content-6')}}</li>
+                <li>{{$t('ops-content-7')}}</li>
+                <li>{{$t('ops-content-8')}}</li>
+                <li>{{$t('ops-content-9')}}</li>
             </ol>
             <div class="detail-imgs images-wrapper">
                 <div @click="imgLightBox('ops',0)" class="image">
                     <img class="ops-img" src="./../assets/ops-1.png"/>
-                    <p><i class="far fa-arrow-alt-circle-right"></i> 使用HTML5的WebRTC技術，進行發票QRcode掃描，並顯示發票相關資訊</p>
+                    <p><i class="far fa-arrow-alt-circle-right"></i> {{$t('ops-img-content-1')}}</p>
                 </div>
                 <div @click="imgLightBox('ops',1)" class="image">
                     <img class="ops-img" src="./../assets/ops-2.png"/>
-                    <p><i class="far fa-arrow-alt-circle-right"></i> 使用HTML5的WebRTC技術，使用點數購買商品</p>
+                    <p><i class="far fa-arrow-alt-circle-right"></i> {{$t('ops-img-content-2')}}</p>
                 </div>
             </div>
             <br>
@@ -62,22 +78,27 @@
         <p :class="['click-project', showContent==='police'?'project-selected':'']" @click="showContent = 'police'"><i class="far fa-file"></i> 台南刑大系統 : {{$t('hi-pro-3')}}<i v-if="showContent!=='police'" class="far fa-hand-point-left"></i></p>
         <div v-show="showContent==='police'" class="fade object-detail">
             <ol>
-                <li>Vue前端開發，PHP後端開發，MySQL資料庫建置</li>
-                <li>前端網頁切版設計</li>
+                <!-- <li>根據顧客需求書與架構書，進行前端網頁切版與視覺設計</li>
+                <li>Vue前端開發，搭配PHP後端開發</li>
                 <li>Css3動畫與Sass預處理器開發</li>
-                <li>串接Google Map API顯示地圖攝影機資訊</li>
-                <li>車牌模糊查詢與容錯查詢</li>
-                <li>Npm套件管理</li>
-                <li>Ｗebpack程式碼編譯、打包以及壓縮</li>
+                <li>串接外部Google Map API顯示地圖攝影機資訊，提高使用者視覺體驗</li>
+                <li>車牌模糊查詢與容錯查詢，提供多種方式查詢車牌</li>
+                <li>Npm套件管理、Ｗebpack程式碼編譯、打包以及壓縮</li> -->
+                <li>{{$t('police-content-1')}}</li>
+                <li>{{$t('police-content-2')}}</li>
+                <li>{{$t('police-content-3')}}</li>
+                <li>{{$t('police-content-4')}}</li>
+                <li>{{$t('police-content-5')}}</li>
+                <li>{{$t('police-content-6')}}</li>
             </ol>
             <div class="detail-imgs images-wrapper">
                 <div @click="imgLightBox('police',0)" class="image">
                     <img src="./../assets/police-2.png"/>
-                    <p><i class="far fa-arrow-alt-circle-right"></i> 登入頁面</p>
+                    <p><i class="far fa-arrow-alt-circle-right"></i> {{$t('police-img-content-1')}}</p>
                 </div>
                 <div @click="imgLightBox('police',1)" class="image">
                     <img src="./../assets/police-1.png"/>
-                    <p><i class="far fa-arrow-alt-circle-right"></i> 攝影機相關資訊頁面</p>
+                    <p><i class="far fa-arrow-alt-circle-right"></i> {{$t('police-img-content-2')}}</p>
                 </div>
             </div>
             <br>
